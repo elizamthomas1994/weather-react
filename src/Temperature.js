@@ -4,9 +4,9 @@ import './Units.css';
 
 export default function Temperature() {
   return (
-    <h3 class="current-weather">
-      <span class="temp-number">0</span>
-      <span class="units">
+    <h3 className="current-weather">
+      <span className="temp-number">0</span>
+      <span className="units">
         <a href="/" id="celsius-link">
           °C
         </a>{" "}
