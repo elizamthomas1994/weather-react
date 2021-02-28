@@ -1,0 +1,7 @@
+.current-day {
+  font-family: "Exo 2", sans-serif;
+  font-size: 20px;
+  color: rgb(89, 112, 136);
+  position: relative;
+  left: 55px;
+}

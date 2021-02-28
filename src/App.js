@@ -1,4 +1,5 @@
 import './App.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 import Form from './Form';
 import Location from "./Location";
 import Temperature from "./Temperature";
