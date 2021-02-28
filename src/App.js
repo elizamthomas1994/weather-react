@@ -1,16 +1,37 @@
-import logo from './logo.svg';
 import './App.css';
-import Weather from './Weather';
+import Form from './Form';
+import Location from "./Location";
+import Temperature from "./Temperature";
+import Description from "./Description";
+import Time from "./Time";
+import Wind from "./Wind";
+import Coder from "./Coder";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Weather city="Tokyo"/>
-      </header>
+      <div className="weather-project">
+        <br />
+        <Form />
+        <Location />
+        <div className="row">
+          <div className="col-6">
+            <Temperature />
+          </div>
+          <div className="col-6">
+            <Description />
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-6">
+            <Time />
+          </div>
+          <div className="col-6">
+            <Wind />
+          </div>
+        </div>
+      </div>
+      <Coder />
     </div>
   );
-}
-
-export default App;
+  }
