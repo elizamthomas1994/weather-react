@@ -1,0 +1,14 @@
+.symbol {
+  text-align: center;
+}
+
+.Day {
+  text-align: center;
+  font-family: "Exo 2", sans-serif;
+  color: white;
+}
+.Temp {
+  text-align: center;
+  font-family: "Exo 2", sans-serif;
+  color: white;
+}

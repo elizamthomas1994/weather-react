@@ -2,10 +2,12 @@ import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css";
 import Form from './Form';
 import Location from "./Location";
+import Icon from "./Icon";
 import Temperature from "./Temperature";
 import Description from "./Description";
 import Time from "./Time";
 import Wind from "./Wind";
+import Forecast from "./Forecast";
 import Coder from "./Coder";
 
 export default function App() {
@@ -15,6 +17,7 @@ export default function App() {
         <br />
         <Form />
         <Location />
+        <Icon />
         <div className="row">
           <div className="col-6">
             <Temperature />
@@ -31,6 +34,8 @@ export default function App() {
             <Wind />
           </div>
         </div>
+        <Forecast />
+        <br />
       </div>
       <Coder />
     </div>
