@@ -1,10 +1,14 @@
 import React from 'react';
+import ReactAnimatedWeather from 'react-animated-weather';
 import './Icon.css';
-
-export default function Icon() {
-    return(
-      <img src="http://openweathermap.org/img/wn/03d@2x.png" 
-      alt="clouds" 
-      id="today" />
-    );
-}
+ 
+const Icon = () => (
+  <ReactAnimatedWeather
+    icon={`CLEAR_DAY`}
+    color={`yellow`}
+    size={80}
+    animate={true}
+  />
+);
+ 
+export default Icon;
