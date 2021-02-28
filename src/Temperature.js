@@ -1,4 +1,6 @@
 import React from "react";
+import './Temperature.css';
+import './Units.css';
 
 export default function Temperature() {
   return (
