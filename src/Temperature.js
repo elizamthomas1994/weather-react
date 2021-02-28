@@ -7,11 +7,11 @@ export default function Temperature() {
     <h3 class="current-weather">
       <span class="temp-number">0</span>
       <span class="units">
-        <a href="#" id="celsius-link">
+        <a href="/" id="celsius-link">
           °C
         </a>{" "}
         |
-        <a href="#" id="farenheit-link">
+        <a href="/" id="farenheit-link">
           °F
         </a>
       </span>
