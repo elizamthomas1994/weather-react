@@ -23,7 +23,7 @@ export default function WeatherResults(props) {
             </div>
             <div className="row">
                 <div className="col-6">
-                    <h4 className="current-day"><CurrentDate date={props.data.date}/></h4>
+                    <h4 className="current-day">Last updated: <CurrentDate date={props.data.date}/></h4>
                 </div>
                 <div className="col-6">
                     <span className="wind-speed">Wind Speed: {Math.round(props.data.wind)}mph</span>
