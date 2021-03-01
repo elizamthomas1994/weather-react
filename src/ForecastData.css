@@ -1,0 +1,14 @@
+.WeatherForecast canvas {
+  display: block;
+  margin: 10px auto;
+  left: -5px;
+}
+.forecast-temp {
+  color: white;
+  text-align: center;
+}
+
+.forecast-time {
+  color: white;
+  text-align: center;
+}

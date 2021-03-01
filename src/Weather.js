@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./Form.css";
 import WeatherResults from "./WeatherResults"
+import Forecast from "./Forecast";
 
 export default function Weather(props) {
     const[weatherInfo, setWeatherInfo]= useState({ ready: false });
@@ -51,13 +52,12 @@ export default function Weather(props) {
                             <button type="submit" className="btn btn-primary" id="search">
                              🔎
                             </button>
-                            <button type="button" className="btn btn-secondary" id="locator">
-                            🧭
-                            </button>
                         </div>
                     </div>
                 </form>
                 <WeatherResults data={weatherInfo}/>
+                <br />
+                <Forecast city={weatherInfo.city}/>
             </div>)
     } else {
         search();

@@ -36,7 +36,7 @@ export default function Temperature(props) {
         return(
         <div className="weather-temperature">
             <h3 className="current-weather">
-                <span className="temp-number">{Math.round(Math.round(props.celsius) * 9 / 5 + 32)}</span>
+                <span className="temp-number">{Math.round((props.celsius) * 9 / 5 + 32)}</span>
                 <span className="units">
                     <a href="/" onClick={showCelsius} id="celsius-link">
                     °C
