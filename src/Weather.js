@@ -6,23 +6,24 @@ import Icon from "./Icon";
 import "./Temperature.css";
 import "./Units.css";
 import "./Time.css";
+import CurrentDate from "./CurrentDate";
 import "./Description.css";
 import "./Wind.css";
 
-export default function Weather() {
-    const[ready, setReady] = useState(false);
-    const[weatherInfo, setWeatherInfo]= useState({});
+export default function Weather(props) {
+    const[weatherInfo, setWeatherInfo]= useState({ ready: false });
     function handleResponse(response) {
         setWeatherInfo({
+            ready: true,
             city: response.data.name,
             temperature: response.data.main.temp,
+            date: new Date(response.data.dt * 1000),
             description: response.data.weather[0].description,
             wind: response.data.wind.speed,
         })
-        setReady(true);
     }
 
-    if (ready) {
+    if (weatherInfo.ready) {
         return(<div className="Weather">
                 <form>
                     <div className="row">
@@ -68,7 +69,7 @@ export default function Weather() {
                 </div>
                 <div className="row">
                     <div className="col-6">
-                        <h4 className="current-day">Fri Feb 5 21:00</h4>
+                        <h4 className="current-day"><CurrentDate date={weatherInfo.date}/></h4>
                     </div>
                     <div className="col-6">
                         <span className="wind-speed">Wind Speed: {Math.round(weatherInfo.wind)}mph</span>
@@ -77,8 +78,7 @@ export default function Weather() {
             </div>)
     } else {
         const apiKey=`845420caf0be768c5c5bd5aebfc06b76`;
-        let city=`Tokyo`;
-        let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+        let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
         axios.get(apiUrl).then(handleResponse);
         return("Loading...");
     }
