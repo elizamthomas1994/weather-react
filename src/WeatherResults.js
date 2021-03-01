@@ -12,7 +12,7 @@ export default function WeatherResults(props) {
     return (
         <div>
             <h1 className="current-city">{props.data.city}</h1>
-            <Icon />
+            <Icon code={props.data.icon} />
             <div className="row">
                 <div className="col-6">
                     <h3 className="current-weather">
